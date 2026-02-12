@@ -51,11 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-
-.center * {
-    width: 100%;
+    gap: 30px;
 }
 
 .center label {

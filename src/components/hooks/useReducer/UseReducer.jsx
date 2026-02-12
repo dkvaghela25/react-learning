@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import GithubLink from '../../ui/GithubLink';
 
 const UseReducer = () => {
 
@@ -24,10 +25,14 @@ const UseReducer = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     return (
         <div className='center'>
+            <h1>Counter using useReducer hook</h1>
             <h1>Count : {state.count} </h1>
-            <button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</button>
-            <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button>
-            <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+            <div className='flex gap-10'>
+                <button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</button>
+                <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button>
+                <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+            </div>
+            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/hooks/useReducer/UseReducer.jsx" />
         </div>
     )
 }

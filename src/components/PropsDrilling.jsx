@@ -1,10 +1,15 @@
 import React from 'react'
+import GithubLink from './ui/GithubLink'
 
 const PropDrilling = () => {
   return (
     <div>
+      <h1>Prop Drilling</h1>
+      <br />
       <h1>Parent Component</h1>
       <ChildComponent message={"Hello World!!!"} />
+      <br />
+      <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/PropsDrilling.jsx" />
     </div>
   )
 }

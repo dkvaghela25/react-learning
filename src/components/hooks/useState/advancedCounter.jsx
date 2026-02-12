@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import GithubLink from '../../ui/GithubLink';
 
 const AdvancedCounter = () => {
     const [count, setCount] = useState(0);
@@ -32,7 +33,7 @@ const AdvancedCounter = () => {
     return (
         <div className='center'>
             <h1>Advanced Counter</h1>
-            <h2>Count : {count}</h2>
+            <h1>Count : {count}</h1>
             <form action="">
                 Steps : <input type="number" min={1} value={steps} onChange={handleChange} />
             </form>
@@ -44,6 +45,7 @@ const AdvancedCounter = () => {
             <div id="history">
 
             </div>
+            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/hooks/useState/advancedCounter.jsx" />
         </div>
     )
 }

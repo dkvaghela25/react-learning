@@ -11,10 +11,9 @@ const CleanUp = () => {
         return () => clearInterval(timer)
     }, [])
     
-    return (
-        <h1>
-            Count - {count}
-        </h1>
+    return ( <>
+        <h1>Count - {count}</h1>
+    </>
     )
 }
 

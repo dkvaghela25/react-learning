@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pract = () => {
+const Practice = () => {
     let students = [];
     return (
         <>  
@@ -12,4 +12,4 @@ const Pract = () => {
     )
 }
 
-export default Pract
+export default Practice

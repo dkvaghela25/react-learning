@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
+import GithubLink from '../../ui/GithubLink';
 
 const LiftStateUp = () => {
     const [inputValue, setInputValue] = useState("");
     return (
-        <div>
-            <InputComponent inputValue={inputValue} setInputValue={setInputValue} />
-            <DisplayComponent inputValue={inputValue} />
+        <div className='center'>
+            <h1>Lift State Up : Instead of creating input state in child component define it in parent such that both can access that state</h1>
+            <div>
+                <InputComponent inputValue={inputValue} setInputValue={setInputValue} />
+                <DisplayComponent inputValue={inputValue} />
+            </div>
+                <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/hooks/useState/LiftStateUp.jsx" />
+
         </div>
     )
 }

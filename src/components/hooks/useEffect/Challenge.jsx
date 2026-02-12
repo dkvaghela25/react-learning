@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Challange = () => {
+const Challenge = () => {
 
     const [count, setCount] = useState(0);
     const [inputValue, setInputValue] = useState("");
@@ -12,10 +12,10 @@ const Challange = () => {
     useEffect(() => {
         document.title = `Count ${count}`
     }, [count])
-
+    
     return (
         <div className='center'>
-            <h1>useEffect Challange</h1>
+            <h1>useEffect Challenge</h1>
             <h1>Count : {count}</h1>
             <button onClick={() => setCount(count + 1)}>Increment</button>
             <div>My name is {inputValue}</div>
@@ -24,4 +24,4 @@ const Challange = () => {
     )
 }
 
-export default Challange
+export default Challenge

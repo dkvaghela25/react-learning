@@ -13,9 +13,10 @@ export const ThemeProvider = ({ children }) => {
 }
 
 const LightDark = () => {
+    console.log(useContext(ThemeContext));
     const { theme, handleToggle } = useContext(ThemeContext);
     return (
-        <div className={` w-screen h-screen absolute top-0 right-0 flex flex-col justify-center items-center gap-5 ${theme === 'dark' ? 'bg-black text-white' : 'text-black bg-white'} `}>
+        <div className={` w-full h-[80vh] flex flex-col justify-center items-center gap-5 ${theme === 'dark' ? 'bg-black text-white' : 'text-black bg-white'} `}>
             <h1>Dark Light Mode Website</h1>
             <button onClick={handleToggle} className='bg-blue-500'>Switch to {theme === 'dark' ? 'light' : 'dark'} mode</button>
         </div>

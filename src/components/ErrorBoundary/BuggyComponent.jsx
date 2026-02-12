@@ -1,5 +1,5 @@
 const BuggyComponent = () => {
-    throw new Error("I crashed!");
+    // throw new Error("I crashed!");
     return <div>Normal UI</div>;
 }
 
