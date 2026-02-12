@@ -12,7 +12,7 @@ const ReactMemo = () => {
             <h1>Count - {count}</h1>
             <button onClick={() => setCount(count + 1)}>Increment</button>
             <Child bioData={bioData} />
-            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/hooks/Memo/ReactMemo.jsx" />
+            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/Optimization/Memoization/ReactMemo.jsx" />
         </div>
     )
 }

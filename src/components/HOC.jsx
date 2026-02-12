@@ -1,11 +1,14 @@
 import React from 'react'
+import GithubLink from './ui/GithubLink';
 
 const HOC = () => {
     const GreetingsWithBorder = withBorder(Greetings);
     return (
-        <div>
+        <div className='center'>
+            <h1>HOC : Wrap component with some extra styles or content</h1>
             <Greetings message="How Are You ?" />
             <GreetingsWithBorder message="How Are You ?" />
+            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/HOC.jsx" />
         </div>
     )
 }

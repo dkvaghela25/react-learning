@@ -8,9 +8,7 @@ import { ThemeProvider } from './components/hooks/useContext/LightDark.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider>
-    <ErrorBoundary>
       <App />
-    </ErrorBoundary>
     </ThemeProvider>
   </StrictMode>,
 )

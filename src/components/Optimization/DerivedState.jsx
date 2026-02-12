@@ -27,7 +27,7 @@ const DerivedState = () => {
                 <div>User Count : {userCount}</div>
                 <div>Average Age : {avgAge}</div>
             </div>
-            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/hooks/useState/DerivedState.jsx" />
+            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/Optimization/DerivedState.jsx" />
         </div>
     )
 }

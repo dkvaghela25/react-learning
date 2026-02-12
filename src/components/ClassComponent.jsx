@@ -1,5 +1,6 @@
 // Filename - src/index.js:
 import React from "react";
+import GithubLink from "./ui/GithubLink";
 class ClassComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -14,21 +15,11 @@ class ClassComponent extends React.Component {
     }
     render() {
         return (
-            <div>
-                <h1>
-                    GeeksForGeeks.org, Hello
-                    {this.state.hello}
-                </h1>
-                <h1>{this.props.message}</h1>
-                <h2>
-                    <button
-                        onClick={this.changeState.bind(
-                            this
-                        )}
-                    >
-                        Press Here!
-                    </button>
-                </h2>
+            <div className="center">
+                <h1>Example of class component</h1>
+                <h1> GeeksForGeeks.org, Hello {this.state.hello} {this.props.message} </h1>
+                <h2> <button onClick={this.changeState.bind(this)}> Press Here! </button> </h2>
+                <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/ClassComponent.jsx" />
             </div>
         );
     }
