@@ -41,6 +41,9 @@ import Throttling from './components/Optimization/SearchTechniques/Throttling.js
 import Practice from './components/Practice.jsx'
 import ShortCircuit from './components/hooks/useState/ShortCircuit.jsx'
 import AdvancedCounter from './components/hooks/useState/advancedCounter.jsx'
+import MUI from "./components/MUI/MUI.jsx";
+import Parent from "./components/Alert.jsx";
+import DragAndDrop from "./components/DragAndDrop.jsx";
 
 const componentsMap = {
   // Practice: <Practice />,
@@ -73,7 +76,7 @@ const componentsMap = {
   UseMemo: <UseMemo />,
   UseCallback: <UseCallback />,
   UseEffectEvent: <UseEffectEvent />,
-  // ReactHookForm: <ReactHookForm />,
+  ReactHookForm: <ReactHookForm />,
   // IntegratingUiLibraries: <IntegratingUiLibraries />,
   // SchemaValidationYup: <SchemaValidationYup />,
   // Zustand: <Zustand />,
@@ -83,7 +86,9 @@ const componentsMap = {
   BuggyComponent: <BuggyComponent />,
   LazyLoading: <LazyLoading />,
   Debounce: <Debounce />,
-  Throttling: <Throttling />
+  Throttling: <Throttling />,
+  MUI: <MUI />,
+  DragAndDrop: <DragAndDrop />,
 };
 
 const ComponentSwitcher = () => {

@@ -1,14 +1,16 @@
-import GithubLink from "../ui/GithubLink";
-import ErrorBoundary from "./ErrorBoundary";
 
+import { ErrorBoundary } from "react-error-boundary";
+import GithubLink from "../ui/GithubLink";
+import ErrorFallback from "./ErrorBoundary";
 const MainApp = () => {
     return (
         <>
-            <ErrorBoundary>
+            <ErrorBoundary FallbackComponent={ErrorFallback}>
                 <h1>Implementation of how error boundaries works</h1>
                 <BuggyComponent />
-                <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/ErrorBoundary/BuggyComponent.jsx" />
             </ErrorBoundary>
+            <br /><br />
+            <GithubLink link="https://github.com/dkvaghela25/react-learning/blob/main/src/components/ErrorBoundary/BuggyComponent.jsx" />
         </>
     )
 }
