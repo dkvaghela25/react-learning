@@ -1,4 +1,4 @@
-import { DndContext, useDraggable, useDroppable } from "@dnd-kit/core";
+import { DndContext, PointerSensor, useDraggable, useDroppable, useSensor, useSensors } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
 import { useState } from "react";
 
@@ -13,15 +13,27 @@ const DragAndDrop = () => {
     setCartItems(prev => ([...prev, newItem]))
   }
 
+  const handleClick = (newItem) => {
+    setCartItems(prev => ([...prev, newItem]))
+  }
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 5,
+      },
+    })
+  );
+
   return (
-    <DndContext onDragEnd={addItemToCart}>
+    <DndContext sensors={sensors} onDragEnd={addItemToCart}>
       <main className="flex flex-col gap-4 items-center w-full">
         <h1>Implementation of drag and drop dnd-kit</h1>
         <div className="flex flex-col gap-3">
           <h2 className="text-xl font-extrabold" >Fruit List</h2>
           <ul className="flex gap-2">
             {fruits.map((fruit) => (
-              <FruitDraggable key={fruit}>{fruit}</FruitDraggable>
+              <FruitDraggable key={fruit} onClick={() => handleClick(fruit)}>{fruit}</FruitDraggable>
             ))}
           </ul>
         </div>
@@ -51,7 +63,7 @@ const CartDroppable = ({ items }) => {
   )
 }
 
-const FruitDraggable = ({ children }) => {
+const FruitDraggable = ({ children, onClick }) => {
 
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: children,
@@ -60,11 +72,12 @@ const FruitDraggable = ({ children }) => {
 
   return (
     <div
+      onClick={onClick}
       ref={setNodeRef}
       {...attributes}
       {...listeners}
       style={{ transform: CSS.Translate.toString(transform) }}
-      className="px-4 py-1 rounded-xl border hover:cursor-grab"
+      className="px-4 py-1 rounded-xl border cursor-move"
     >
       {children}
     </div >
