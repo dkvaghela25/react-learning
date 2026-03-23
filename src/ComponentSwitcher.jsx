@@ -42,8 +42,8 @@ import Practice from './components/Practice.jsx'
 import ShortCircuit from './components/hooks/useState/ShortCircuit.jsx'
 import AdvancedCounter from './components/hooks/useState/advancedCounter.jsx'
 import MUI from "./components/MUI/MUI.jsx";
-import Parent from "./components/Alert.jsx";
-import DragAndDrop from "./components/DragAndDrop.jsx";
+import SortableList from "./components/DndKit/SortableList.jsx";
+import DragAndDrop from "./components/DndKit/DragAndDrop.jsx";
 
 const componentsMap = {
   // Practice: <Practice />,
@@ -88,6 +88,7 @@ const componentsMap = {
   Debounce: <Debounce />,
   Throttling: <Throttling />,
   MUI: <MUI />,
+  SortableList: <SortableList />,
   DragAndDrop: <DragAndDrop />,
 };
 

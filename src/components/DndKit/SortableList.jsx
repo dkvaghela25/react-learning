@@ -5,7 +5,8 @@ import { CSS } from "@dnd-kit/utilities";
 import { useState } from "react";
 import { RxDragHandleDots2 } from "react-icons/rx";
 
-const DragAndDrop = () => {
+const SortableList = () => {
+    
     const [skills, setSkills] = useState(["JavaScript", "TypeScript", "Python", "Java", "C", "C++", "C#", "Go", "PHP"]);
 
     const itemIds = skills.map((_, i) => i.toString());
@@ -25,7 +26,7 @@ const DragAndDrop = () => {
         <>
             <DndContext onDragEnd={recordSkills}>
                 <main className="flex flex-col gap-4 items-center w-full">
-                    <h1>Implementation of drag and drop using dnd-kit</h1>
+                    <h1>Implementation of drag and drop sortable list using dnd-kit</h1>
                     <ul className="flex flex-col gap-2 border p-4 border-dashed">
                         {/* IMPORTANT: The items prop MUST match the IDs used in useSortable */}
                         <SortableContext items={itemIds}>
@@ -41,7 +42,7 @@ const DragAndDrop = () => {
 };
 
 
-export default DragAndDrop;
+export default SortableList;
 
 const Skill = ({ id, children }) => {
     const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
