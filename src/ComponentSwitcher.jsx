@@ -35,7 +35,7 @@ import SortableList from "./components/DndKit/SortableList.jsx";
 import DragAndDrop from "./components/DndKit/DragAndDrop.jsx";
 import DndDragOverlay from "./components/DndKit/DndDragOverlay.jsx";
 import PdfPreview from "./components/ReactPDFViewer/PdfPreview.jsx";
-import MultiLanguage from "./components/Multilanguage/Multilanguage.jsx";
+import MultiLanguage from "./components/MultiLanguage/MultiLanguage.jsx";
 
 const componentsMap = {
   Profile: <Profile />,
