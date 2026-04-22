@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx'
 import { ThemeProvider } from './components/hooks/useContext/LightDark.jsx'
+import "./config/config.js"
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>

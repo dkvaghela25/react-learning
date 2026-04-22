@@ -44,6 +44,9 @@ import AdvancedCounter from './components/hooks/useState/advancedCounter.jsx'
 import MUI from "./components/MUI/MUI.jsx";
 import SortableList from "./components/DndKit/SortableList.jsx";
 import DragAndDrop from "./components/DndKit/DragAndDrop.jsx";
+import DndDragOverlay from "./components/DndKit/DndDragOverlay.jsx";
+import PdfPreview from "./components/ReactPDFViewer/PdfPreview.jsx";
+import MultiLanguage from "./components/Multilanguage/Multilanguage.jsx";
 
 const componentsMap = {
   // Practice: <Practice />,
@@ -90,6 +93,9 @@ const componentsMap = {
   MUI: <MUI />,
   SortableList: <SortableList />,
   DragAndDrop: <DragAndDrop />,
+  DndDragOverlay: <DndDragOverlay />,
+  PdfPreview: <PdfPreview />,
+  MultiLanguage: <MultiLanguage />,
 };
 
 const ComponentSwitcher = () => {
